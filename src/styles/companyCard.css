@@ -1,0 +1,70 @@
+/* --- Company Card --- */
+.company-card {
+  width: 320px;
+  height: 380px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(26, 25, 25, 0.15);
+}
+
+/* --- Company Logo Container --- */
+.company-logo-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Logo Img--- */
+.company-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(1.02) translate(-50%, -50%);
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.company-card:hover .company-logo {
+  transform: scale(1.08) translate(-50%, -50%);
+}
+
+/* --- Company Info --- */
+.company-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.company-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #0a2540;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.company-location,
+.company-industry {
+  font-size: 0.9rem;
+  color: #555;
+}

@@ -1,0 +1,90 @@
+.company-modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(145deg, #ffffff, #f7f8fa);
+  padding: 32px;
+  border-radius: 20px;
+  width: 480px;
+  max-width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  text-align: left;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.modal-section {
+  margin-top: 18px;
+}
+
+.modal-heading {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.modal-info {
+  color: #374151;
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.modal-description {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.modal-contact {
+  color: #334155;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.modal-divider {
+  margin: 16px 0;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -46%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Scrollbar styling */
+.company-modal-box::-webkit-scrollbar {
+  width: 6px;
+}
+.company-modal-box::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}

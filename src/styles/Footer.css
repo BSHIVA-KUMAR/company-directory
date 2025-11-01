@@ -1,0 +1,30 @@
+.footer {
+  width: 100vw; /* full viewport width */
+  background-color: #ffffff;
+  text-align: center;
+  padding: 16px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  left: 0;
+}
+
+.footer-text {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.footer-links {
+  color: #1178BB;
+  font-size: 13px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #15A79F;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
