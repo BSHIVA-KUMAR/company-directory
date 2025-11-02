@@ -1,22 +1,20 @@
-
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CompanyContext } from "../context/CompanyContext";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import "../styles/navbar.css";
 
 export default function Navbar() {
   const { filters, setFilters } = useContext(CompanyContext);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleToast = (label) => {
-    toast.dismiss(); // ensures only one toast at a time
+    toast.dismiss();
     toast.info(`${label} is under development 🚧`, {
       position: "top-center",
       autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
       theme: "colored",
     });
   };
@@ -39,12 +37,27 @@ export default function Navbar() {
         />
       </div>
 
-      <div className="nav-links">
-        {["Job Notifications", "Resources", "Get Support", "Login"].map((item) => (
-          <button key={item} className="nav-btn" onClick={() => handleToast(item)}>
-            {item}
-          </button>
-        ))}
+      {/* Hamburger icon for mobile */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <CloseIcon /> : <MenuIcon />}
+      </div>
+
+      {/* Nav links */}
+      <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+        {["Job Notifications", "Resources", "Get Support", "Login"].map(
+          (item) => (
+            <button
+              key={item}
+              className="nav-btn"
+              onClick={() => {
+                handleToast(item);
+                setMenuOpen(false);
+              }}
+            >
+              {item}
+            </button>
+          )
+        )}
       </div>
 
       <ToastContainer limit={1} />

@@ -14,7 +14,7 @@ export const CompanyProvider = ({ children }) => {
   });
   const [loading, setLoading] = useState(true);
 
-  // Load companies from local JSON file
+  // Load companies from local/Static JSON file
   useEffect(() => {
     axios
       .get("/companies.json")

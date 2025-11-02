@@ -48,7 +48,9 @@ export default function CompanyModal({ company, onClose }) {
           <Typography variant="h6" className="modal-heading">
             📝 About the Company
           </Typography>
-          <Typography className="modal-description">{company.description}</Typography>
+          <Typography className="modal-description">
+            {company.description}
+          </Typography>
         </div>
 
         <Divider className="modal-divider" />
